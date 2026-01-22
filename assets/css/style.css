@@ -786,7 +786,7 @@ img {
   -ms-interpolation-mode: bicubic;
   border: 0;
   vertical-align: middle;
-  max-width: 100%;
+  max-width: 103%;
   height: auto;
 
 }
@@ -10280,7 +10280,7 @@ header.header--sticky.sticky .nav-area ul li.main-nav {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 35px;
+  margin-top: 14px;
   flex-wrap: wrap;
   gap: 15px;
 }
@@ -20548,6 +20548,7 @@ body.with-sticky-item {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  background-color: #F2F2F2;
 }
 
 .progress-wrap::after {
