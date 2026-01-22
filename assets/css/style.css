@@ -9998,7 +9998,7 @@ header.header--sticky.sticky .nav-area ul li.main-nav {
   gap: 10px;
   justify-content: center;
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1;
 }
@@ -13154,7 +13154,7 @@ section.main-wrapper-sticky .sticky-statement.narrow .left-side img {
 }
 .call-and-sign-area .call-area .information .title {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 26px;
   color: #1C2539;
   margin: 0;
