@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" Our mission is to empower engineers to think critically, while collectively contributingto the development of  Thirumangalam and the surrounding regions">                           
+    <meta name="description"
+        content=" Our mission is to empower engineers to think critically, while collectively contributingto the development of  Thirumangalam and the surrounding regions">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/icons.webp">
     <title>ACET</title>
     <link rel="stylesheet preload" href="assets/css/plugins/fontawesome.css" as="style">
     <link rel="stylesheet preload" href="assets/css/plugins/swiper.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet preload" href="assets/css/plugins/metismenu.css" as="style">
-    <link rel="stylesheet preload" href="assets/css/plugins/magnifying-popup.css" as="style">
     <link rel="stylesheet preload" href="assets/css/plugins/odometer.css" as="style">
     <link rel="stylesheet preload" href="assets/css/vendor/bootstrap.min.css" as="style">
 
@@ -19,11 +20,35 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&amp;display=swap"
         rel="stylesheet preload" as="style">
-    <link rel="preload" as="image" href="assets/images/banner/21.webp" />
     <link rel="stylesheet preload" href="assets/css/style.css" as="style">
 </head>
 
 <body class="investment-home onepage">
+    <!-- Loader -->
+    <div id="loader"
+        style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;display:flex;justify-content:center;align-items:center;z-index:99999;">
+        <div class="loader-inner">
+            <img src="assets/images/logo/icons.webp" alt="Website Logo" class="loader-logo">
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            // Check if first time visiting
+            var isFirstVisit = !localStorage.getItem('visitedBefore');
+
+            // First visit: 5 seconds, Return visit: 2 seconds
+            var loaderTime = isFirstVisit ? 5000 : 2000;
+
+            setTimeout(function () {
+                document.body.classList.add('loader');
+                // Mark as visited
+                localStorage.setItem('visitedBefore', 'true');
+            }, loaderTime);
+        });
+    </script>
+
+
+    <!-- Loader End -->
 
     <header class="header-one style-four header--sticky header-investment">
         <div class="header-top-area-wrapper">
@@ -57,41 +82,33 @@
                         <div class="header-main-one-wrapper">
                             <div class="thumbnail py-3">
                                 <a href="index.html">
-                                    <img src="assets/images/logo/logo.png" alt="finbiz-logo">
+                                    <img src="assets/images/logo/logo copy.webp" alt="finbiz-logo">
                                 </a>
                             </div>
                             <div class="main-header">
                                 <div class="nav-area">
                                     <ul>
-                                        <li class="main-nav mega-menu project-a-after">
-                                            <a href="#home">Home</a>
+                                        <li class="main-nav mega-menu project-a-after parent-nav">
+                                            <a href="index.html">Home</a>
                                         </li>
-
                                         <li class="main-nav mega-menu">
-                                            <a href="#about">About us </a>
+                                            <a href="aboutus.html">About us </a>
                                         </li>
                                         <li class="main-nav project-a-after">
                                             <a href="#portfolio">Gallery</a>
                                         </li>
                                         <li class="main-nav mega-menu">
-                                            <a href="#team">Association</a>
+                                            <a href="team.html">Association</a>
                                         </li>
-
                                         <li class="main-nav project-a-after">
-                                            <a href="#event">Events</a>
+                                            <a href="event.html">Events</a>
                                         </li>
                                     </ul>
                                 </div>
 
 
-                                <div class="loader-wrapper">
-                                    <div class="loader">
-                                    </div>
-                                    <div class="loader-section section-left"></div>
-                                    <div class="loader-section section-right"></div>
-                                </div>
                                 <div class="button-area">
-                                    <a href="#contact"
+                                    <a href="index.html#contact"
                                         class="rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btn">Contact us
                                     </a>
                                     <button id="menu-btn" class="menu menu-btn ml--20 ml_sm--5">
@@ -131,7 +148,7 @@
             </div>
         </div>
         <div class="shape">
-            <img src="assets/images\banner/small-img/LINE.png" alt="">
+            <img src="assets/images\banner/small-img/bb2.png" alt="">
         </div>
     </div>
     <div class="image-slider-area">
@@ -200,53 +217,53 @@
                     <div class="progress-circle-main-wrapper">
                         <div class="single-progress-area">
                             <div class="single-progress-circle">
-                                <svg class="radial-progress" data-countervalue="30" viewBox="0 0 80 80">
+                                <svg class="radial-progress" data-countervalue="48" viewBox="0 0 80 80">
                                     <circle class="bar-static" cx="40" cy="40" r="35"></circle>
                                     <circle class="bar--animated" cx="40" cy="40" r="35"
                                         style="stroke-dashoffset: 217.8;"></circle>
                                     <text class="countervalue start" x="50%" y="50%"
                                         transform="matrix(0, 1, -1, 0, 80, 0)"></text>
                                 </svg>
-                                <img src="assets/images/fun/01.svg" alt="fun">
+                                <img src="assets/images/fun/01 1.svg" alt="fun">
                             </div>
                             <div class="right-counter">
-                                <h2 class="counter title"><span class="odometer" data-count="25">00</span>+
+                                <h2 class="counter title"><span class="odometer" data-count="48">00</span>+
                                 </h2>
                                 <p>Members</p>
                             </div>
                         </div>
                         <div class="single-progress-area">
                             <div class="single-progress-circle">
-                                <svg class="radial-progress" data-countervalue="25" viewBox="0 0 80 80">
+                                <svg class="radial-progress" data-countervalue="18" viewBox="0 0 80 80">
                                     <circle class="bar-static" cx="40" cy="40" r="35"></circle>
                                     <circle class="bar--animated" cx="40" cy="40" r="35"
                                         style="stroke-dashoffset: 217.8;"></circle>
                                     <text class="countervalue start" x="50%" y="50%"
                                         transform="matrix(0, 1, -1, 0, 80, 0)"></text>
                                 </svg>
-                                <img src="assets/images/fun/02.svg" alt="fun">
+                                <img src="assets/images/fun/01 2.svg" alt="fun">
                             </div>
                             <div class="right-counter">
-                                <h2 class="counter title"><span class="odometer" data-count="25">00</span>%
+                                <h2 class="counter title"><span class="odometer" data-count="18">00</span>%
                                 </h2>
                                 <p>Ec Members</p>
                             </div>
                         </div>
                         <div class="single-progress-area">
                             <div class="single-progress-circle">
-                                <svg class="radial-progress" data-countervalue="50" viewBox="0 0 80 80">
+                                <svg class="radial-progress" data-countervalue="10" viewBox="0 0 80 80">
                                     <circle class="bar-static" cx="40" cy="40" r="35"></circle>
                                     <circle class="bar--animated" cx="40" cy="40" r="35"
                                         style="stroke-dashoffset: 217.8;"></circle>
                                     <text class="countervalue start" x="50%" y="50%"
                                         transform="matrix(0, 1, -1, 0, 80, 0)"></text>
                                 </svg>
-                                <img src="assets/images/fun/03.svg" alt="fun">
+                                <img src="assets/images/fun/01 3.svg" alt="fun">
                             </div>
                             <div class="right-counter">
-                                <h2 class="counter title"><span class="odometer" data-count="50">00</span>+
+                                <h2 class="counter title"><span class="odometer" data-count="10">00</span>+
                                 </h2>
-                                <p>Business Awards</p>
+                                <p>Events</p>
                             </div>
                         </div>
                     </div>
@@ -290,7 +307,7 @@
                                 Tamil Nadu & Puducherry, strengthening collaboration and representation at the state
                                 level.
                             </p>
-                            <div class="call-and-sign-area two">
+                            <div class="call-and-sign-area ">
                                 <div class="call-area py-5">
                                     <div class="icon">
                                         <i class="fa-sharp fa-regular fa-phone-volume"></i>
@@ -302,9 +319,9 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="call-area ">
-                                    <div class="icon">
-                                        <i class=" fal fa-envelope"></i>
+                                <div class="call-area d-flex align-items-center gap-3 ">
+                                    <div class="icon-email">
+                                        <i class=" fal fa-envelope  fs-2"></i>
                                     </div>
                                     <div class="information">
                                         <span>Email us anytime</span>
@@ -355,19 +372,6 @@
                                             <a class="thumbnail">
                                                 <img src="assets/images/gallery/G1.webp" alt="project">
                                             </a>
-                                            <!--
-                                            <div class="inner">
-                                                <a href="">
-                                                    <h3 class="title">State-Level Representation</h3>
-                                                    <span>Officially affiliated with the Federation of All Civil
-                                                        Engineering Associations of Tamil Nadu & Puducherry, ensuring
-                                                        wider recognition and support.</span>
-                                                </a>
-                                            </div>
-                                            <div class="eye">
-                                                <img src="assets/images/project/eye.svg" alt="project">
-                                            </div>
-                                            -->
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -375,18 +379,6 @@
                                             <a class="thumbnail">
                                                 <img src="assets/images/gallery/G2.webp" alt="project">
                                             </a>
-                                            <!--
-                                            <div class="inner">
-                                                <a href="project-details.html">
-                                                    <h3 class="title">Networking & Collaboration</h3>
-                                                    <span>Connect with experienced professionals, contractors, and
-                                                        suppliers to build meaningful industry relationships.</span>
-                                                </a>
-                                            </div>
-                                            <div class="eye">
-                                                <img src="assets/images/project/eye.svg" alt="project">
-                                            </div>
-                                            -->
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -394,18 +386,6 @@
                                             <a class="thumbnail">
                                                 <img src="assets/images/gallery/G3.webp" alt="project">
                                             </a>
-                                            <!-- 
-                                            <div class="inner">
-                                                <a href="project-details.html">
-                                                    <h3 class="title">Events & Engineer Meets</h3>
-                                                    <span>Engineer meet-ups, technical tours, celebrations, and
-                                                        association gatherings to strengthen community bonding.</span>
-                                                </a>
-                                            </div>
-                                            <div class="eye">
-                                                <img src="assets/images/project/eye.svg" alt="project">
-                                            </div>
-                                            -->
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -413,18 +393,6 @@
                                             <a class="thumbnail">
                                                 <img src="assets/images/gallery/G4.webp" alt="project">
                                             </a>
-                                            <!-- 
-                                            <div class="inner">
-                                                <a href="project-details.html">
-                                                    <h3 class="title">Career & Business Growth</h3>
-                                                    <span>Opportunities for professional growth, project exposure, and
-                                                        business development through association activities.</span>
-                                                </a>
-                                            </div>
-                                            <div class="eye">
-                                                <img src="assets/images/project/eye.svg" alt="project">
-                                            </div>
-                                        -->
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -432,19 +400,6 @@
                                             <a class="thumbnail">
                                                 <img src="assets/images/gallery/G5.webp" alt="project">
                                             </a>
-                                            <!--
-                                            <div class="inner">
-                                                <a href="">
-                                                    <h3 class="title">State-Level Representation</h3>
-                                                    <span>Officially affiliated with the Federation of All Civil
-                                                        Engineering Associations of Tamil Nadu & Puducherry, ensuring
-                                                        wider recognition and support.</span>
-                                                </a>
-                                            </div>
-                                            <div class="eye">
-                                                <img src="assets/images/project/eye.svg" alt="project">
-                                            </div>
-                                            -->
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -452,18 +407,6 @@
                                             <a class="thumbnail">
                                                 <img src="assets/images/gallery/G6.webp" alt="project">
                                             </a>
-                                            <!--
-                                            <div class="inner">
-                                                <a href="project-details.html">
-                                                    <h3 class="title">Networking & Collaboration</h3>
-                                                    <span>Connect with experienced professionals, contractors, and
-                                                        suppliers to build meaningful industry relationships.</span>
-                                                </a>
-                                            </div>
-                                            <div class="eye">
-                                                <img src="assets/images/project/eye.svg" alt="project">
-                                            </div>
-                                            -->
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -471,18 +414,6 @@
                                             <a class="thumbnail">
                                                 <img src="assets/images/gallery/G7.webp" alt="project">
                                             </a>
-                                            <!--
-                                            <div class="inner">
-                                                <a href="project-details.html">
-                                                    <h3 class="title">Events & Engineer Meets</h3>
-                                                    <span>Engineer meet-ups, technical tours, celebrations, and
-                                                        association gatherings to strengthen community bonding.</span>
-                                                </a>
-                                            </div>
-                                            <div class="eye">
-                                                <img src="assets/images/project/eye.svg" alt="project">
-                                            </div>
-                                            -->
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -490,18 +421,6 @@
                                             <a class="thumbnail">
                                                 <img src="assets/images/gallery/G8.webp" alt="project">
                                             </a>
-                                            <!--
-                                            <div class="inner">
-                                                <a href="project-details.html">
-                                                    <h3 class="title">Career & Business Growth</h3>
-                                                    <span>Opportunities for professional growth, project exposure, and
-                                                        business development through association activities.</span>
-                                                </a>
-                                            </div>
-                                            <div class="eye">
-                                                <img src="assets/images/project/eye.svg" alt="project">
-                                            </div>
-                                            -->
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -509,18 +428,6 @@
                                             <a class="thumbnail">
                                                 <img src="assets/images/gallery/G9.webp" alt="project">
                                             </a>
-                                            <!--
-                                            <div class="inner">
-                                                <a href="project-details.html">
-                                                    <h3 class="title">Career & Business Growth</h3>
-                                                    <span>Opportunities for professional growth, project exposure, and
-                                                        business development through association activities.</span>
-                                                </a>
-                                            </div>
-                                            <div class="eye" onclick="openImageModal('assets/images/gallery/G9.webp')">
-                                                <img src="assets/images/project/eye.svg" alt="View">
-                                            </div>
-                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -550,7 +457,7 @@
                                 <div class="swiper-slide">
                                     <div class="team-single-one-start">
                                         <div class="team-image-area">
-                                            <a href="">
+                                            <a href="#">
                                                 <img src="assets/images/team/A1.webp" alt="Business_Team_single">
                                                 <div class="team-social">
                                                     <div class="main">
@@ -565,7 +472,7 @@
                                             </a>
                                         </div>
                                         <div class="single-details">
-                                            <a href="">
+                                            <a href="#">
                                                 <h5 class="title">Er.R. Ravichandran</h5>
                                             </a>
                                             <p>Chief Adviser</p>
@@ -575,7 +482,7 @@
                                 <div class="swiper-slide">
                                     <div class="team-single-one-start">
                                         <div class="team-image-area">
-                                            <a href="">
+                                            <a href="#">
                                                 <img src="assets/images/team/A2.webp" alt="Business_Team_single">
                                                 <div class="team-social">
                                                     <div class="main">
@@ -590,7 +497,7 @@
                                             </a>
                                         </div>
                                         <div class="single-details">
-                                            <a href="">
+                                            <a href="#">
                                                 <h5 class="title">Er.V. Senthil Kumar</h5>
                                             </a>
                                             <p>President</p>
@@ -600,7 +507,7 @@
                                 <div class="swiper-slide">
                                     <div class="team-single-one-start">
                                         <div class="team-image-area">
-                                            <a href="">
+                                            <a href="#">
                                                 <img src="assets/images/team/A3.webp" alt="Business_Team_single">
                                                 <div class="team-social">
                                                     <div class="main">
@@ -615,7 +522,7 @@
                                             </a>
                                         </div>
                                         <div class="single-details">
-                                            <a href="">
+                                            <a href="#">
                                                 <h5 class="title">Er.N. Manivannan</h5>
                                             </a>
                                             <p>Vice President 1</p>
@@ -739,225 +646,258 @@
         <!-- rts team area end -->
 
         <div class="rts-trusted-client rts-section-gap">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="title-area-client-client text-center">
-                    <p class="client-title">Our Trusted Sponsers</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt--65">
-            <div class="col-lg-12">
-                <!-- Swiper -->
-                <div class="swiper clientSwiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/01.webp" alt="Business_client">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/02.webp" alt="Business_client">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/03.webp" alt="Business_client">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/04.webp" alt="Business_client">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/05.webp" alt="Business_client">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/01.webp" alt="Business_client">
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Swiper End -->
-            </div>
-        </div>
-        <div class="row mt--65">
-            <div class="col-lg-12">
-                <!-- Swiper -->
-                <div class="swiper client1Swiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="single">
-                            <img src="assets/images/brand/01.webp" alt="Business_client">
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/02.webp" alt="Business_client">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/03.webp" alt="Business_client">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/04.webp" alt="Business_client">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/05.webp" alt="Business_client">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="assets/images/brand/01.webp" alt="Business_client">
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Swiper End -->
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-/* First slider */
-var swiper = new Swiper(".clientSwiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    loop: true,
-     speed: 4000, 
-    autoplay: {
-        
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 2,
-        },
-        576: {
-            slidesPerView: 3,
-        },
-        768: {
-            slidesPerView: 4,
-        },
-        992: {
-            slidesPerView: 5,
-        },
-    }
-});
-
-/* Second slider – momentum RIGHT */
-var swiper2 = new Swiper(".client1Swiper", {
-    loop: true,
-    slidesPerView: 4,
-    spaceBetween: 30,
-    speed: 4000,   // smooth momentum
-    autoplay: {
-  disableOnInteraction: false,
-        reverseDirection: true   // moves RIGHT
-    },
-    allowTouchMove: true,
-    breakpoints: {
-        320: { slidesPerView: 2 },
-        576: { slidesPerView: 3 },
-        768: { slidesPerView: 4 },
-        992: { slidesPerView: 5 }
-    }
-});
-</script>
-
-
-    <!-- Event start -->
-    <div id="event" class="rts-business-case-area rts-section-gap investment">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="title-between-area">
-                        <div class="title-style-two">
-                            <span class="pre"><img src="assets/images/banner/icon/1.PNG" alt="">
-                                Activites and Events</span>
-                            <h2 class="title rts-text-anime-style-1">Our Events
-                            </h2>
-                        </div>
-                        <div class="pagination-wrapper">
-                            <div class="swiper-button-prevs"><i class="fa-sharp fa-regular fa-arrow-left"></i></div>
-                            <div class="swiper-pagination-fractions"></div>
-                            <div class="swiper-button-nexts"><i class="fa-sharp fa-regular fa-arrow-right"></i>
-                            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-area-client-client text-center">
+                            <p class="client-title">Our Trusted Sponsers</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container mt--40">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="case-studies-wrapper-main-5">
-                        <div class="swiper mySwiper-testimonials-10 p-0" dir="ltr">
+
+                <div class="row mt--65">
+                    <div class="col-lg-12">
+                        <!-- Swiper -->
+                        <div class="swiper clientSwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testimonials-wrapper-investment">
-                                        <div class="thumbnail">
-                                            <img src="assets/images/testimonials/E1.webp" alt="project" class="w-100">
-                                        </div>
-                                        <div class="content position-absolute bottom-0 start-0 p-2 p-md-3 p-lg-4 w-100">
-                                            <h4 class="title fs-10 fs-md-3 fs-lg-4">Inaugural Function</h4>
-                                            <p class="desc small fs-md-10">The Inaugural Function of the Association
-                                                of Civil
-                                                Engineers Thirumangalam (ACET) marks the formal beginning of the
-                                                association with the installation of office.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonials-wrapper-investment">
-                                        <div class="thumbnail">
-                                            <img src="assets/images/testimonials/E2.webp" alt="project" class="w-100">
-                                        </div>
-                                        <div class="content position-absolute bottom-0 start-0 p-2 p-md-5 p-lg-4 w-100">
-                                            <h4 class="title fs-10 fs-md-3 fs-lg-4">Regular Meeting</h4>
-                                            <p class="desc small fs-md-10">
-                                                The First Regular Meeting of the ACET marks the beginning of our
-                                                collective journey towards professional growth and knowledge sharing
-                                                among civil engineers.
 
-                                            </p>
-                                        </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/S 1.png" alt="Business_client">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/02.webp" alt="Business_client">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/03.webp" alt="Business_client">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/04.webp" alt="Business_client">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/05.webp" alt="Business_client">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/01.webp" alt="Business_client">
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Swiper End -->
+                    </div>
+                </div>
+                <div class="row mt--65">
+                    <div class="col-lg-12">
+                        <!-- Swiper -->
+                        <div class="swiper client1Swiper">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="single">
+                                        <img src="assets/images/brand/01.webp" alt="Business_client">
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
-                                    <div class="testimonials-wrapper-investment">
-                                        <div class="thumbnail">
-                                            <img src="assets/images/testimonials/E3.webp" alt="project" class="w-100">
-                                        </div>
-                                        <div class="content position-absolute bottom-0 start-0 p-2 p-md-5 p-lg-4 w-100">
-                                            <h4 class="title fs-20 fs-md-1 fs-lg-4">Regular Meeting – Engineer's Day
-                                                Celebration</h4>
-                                            <p class="desc small fs-md-1">ACET second meeting celebrates Engineers
-                                                Day, honoring
-                                                profession, sharing technical insights among members.
-                                            </p>
+                                    <img src="assets/images/brand/02.webp" alt="Business_client">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/03.webp" alt="Business_client">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/04.webp" alt="Business_client">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/05.webp" alt="Business_client">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="assets/images/brand/01.webp" alt="Business_client">
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Swiper End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+            /* First slider */
+            var swiper = new Swiper(".clientSwiper", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                loop: true,
+                speed: 4000,
+                autoplay: {
+
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                    },
+                    576: {
+                        slidesPerView: 3,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    992: {
+                        slidesPerView: 5,
+                    },
+                }
+            });
+
+            /* Second slider – momentum RIGHT */
+            var swiper2 = new Swiper(".client1Swiper", {
+                loop: true,
+                slidesPerView: 4,
+                spaceBetween: 30,
+                speed: 4000,   // smooth momentum
+                autoplay: {
+                    disableOnInteraction: false,
+                    reverseDirection: true   // moves RIGHT
+                },
+                allowTouchMove: true,
+                breakpoints: {
+                    320: { slidesPerView: 2 },
+                    576: { slidesPerView: 3 },
+                    768: { slidesPerView: 4 },
+                    992: { slidesPerView: 5 }
+                }
+            });
+
+            /* Team slider */
+            var teamSwiper = new Swiper(".mySwiperh1_team", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                loop: true,
+                speed: 1000,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    575: { slidesPerView: 2 },
+                    767: { slidesPerView: 3 },
+                    991: { slidesPerView: 3 },
+                    1300: { slidesPerView: 4 },
+                    1500: { slidesPerView: 4 }
+                }
+            });
+        </script>
+
+
+        <!-- Event start -->
+        <div id="event" class="rts-business-case-area rts-section-gap investment">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title-between-area">
+                            <div class="title-style-two">
+                                <span class="pre"><img src="assets/images/banner/icon/1.PNG" alt="">
+                                    Activites and Events</span>
+                                <h2 class="title rts-text-anime-style-1">Our Events
+                                </h2>
+                            </div>
+                            <div class="pagination-wrapper">
+                                <div class="swiper-button-prevs"><i class="fa-sharp fa-regular fa-arrow-left"></i></div>
+                                <div class="swiper-pagination-fractions"></div>
+                                <div class="swiper-button-nexts"><i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt--40">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="case-studies-wrapper-main-5">
+                            <div class="swiper mySwiper-testimonials-10 p-0" dir="ltr">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonials-wrapper-investment">
+                                            <div class="thumbnail">
+                                                <img src="assets/images/testimonials/E1.webp" alt="project"
+                                                    class="w-100">
+                                            </div>
+                                            <div
+                                                class="content position-absolute bottom-0 start-0 p-2 p-md-3 p-lg-4 w-100">
+                                                <h4 class="title fs-10 fs-md-3 fs-lg-4">Inaugural Function</h4>
+                                                <p class="desc small fs-md-10">The Inaugural Function of the Association
+                                                    of Civil
+                                                    Engineers Thirumangalam (ACET) marks the formal beginning of the
+                                                    association with the installation of office.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonials-wrapper-investment">
-                                        <div class="thumbnail">
-                                            <img src="assets/images/testimonials/E4.webp" alt="project" class="w-100">
+                                    <div class="swiper-slide">
+                                        <div class="testimonials-wrapper-investment">
+                                            <div class="thumbnail">
+                                                <img src="assets/images/testimonials/E2.webp" alt="project"
+                                                    class="w-100">
+                                            </div>
+                                            <div
+                                                class="content position-absolute bottom-0 start-0 p-2 p-md-5 p-lg-4 w-100">
+                                                <h4 class="title fs-10 fs-md-3 fs-lg-4">Regular Meeting</h4>
+                                                <p class="desc small fs-md-10">
+                                                    The First Regular Meeting of the ACET marks the beginning of our
+                                                    collective journey towards professional growth and knowledge sharing
+                                                    among civil engineers.
+
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="content position-absolute bottom-0 start-0 p-2 p-md-5 p-lg-4 w-100">
-                                            <h4 class="title fs-20 fs-md-5 fs-lg-4">Regular Meeting – Pongal
-                                                Celebration</h4>
-                                            <p class="desc small fs-md-1">ACET third regular meeting blends New
-                                                Year 2026, diary
-                                                release, Pongal, fostering professional bonding togetherness.</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonials-wrapper-investment">
+                                            <div class="thumbnail">
+                                                <img src="assets/images/testimonials/E3.webp" alt="project"
+                                                    class="w-100">
+                                            </div>
+                                            <div
+                                                class="content position-absolute bottom-0 start-0 p-2 p-md-5 p-lg-4 w-100">
+                                                <h4 class="title fs-20 fs-md-1 fs-lg-4">Regular Meeting – Engineer's Day
+                                                    Celebration</h4>
+                                                <p class="desc small fs-md-1">ACET second meeting celebrates Engineers
+                                                    Day, honoring
+                                                    profession, sharing technical insights among members.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonials-wrapper-investment">
+                                            <div class="thumbnail">
+                                                <img src="assets/images/testimonials/E4.webp" alt="project"
+                                                    class="w-100">
+                                            </div>
+                                            <div
+                                                class="content position-absolute bottom-0 start-0 p-2 p-md-5 p-lg-4 w-100">
+                                                <h4 class="title fs-20 fs-md-5 fs-lg-4">Regular Meeting – Pongal
+                                                    Celebration</h4>
+                                                <p class="desc small fs-md-1">ACET third regular meeting blends New
+                                                    Year 2026, diary
+                                                    release, Pongal, fostering professional bonding togetherness.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -967,7 +907,6 @@ var swiper2 = new Swiper(".client1Swiper", {
                 </div>
             </div>
         </div>
-    </div>
     </div>
     </div>
     </div>
@@ -1017,8 +956,8 @@ var swiper2 = new Swiper(".client1Swiper", {
             </div>
         </div>
     </div>
-<script>
-    
+    <script>
+
         // Replace with your Google Apps Script Web App URL
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzZojKRku8QfZuLvqOcbnwOwfspvZx81dCAVslTHs3BY_klIrQmA12vrvfL68AJbcbKlg/exec ';
 
@@ -1069,7 +1008,7 @@ var swiper2 = new Swiper(".client1Swiper", {
             }
         });
 
-</script>
+    </script>
     <!-- Contact end-->
 
     <div class="rts-footer-area pt--100 pb--100 pt_sm--50 pb_sm--40  footer-two footer-bg-two">
@@ -1097,15 +1036,15 @@ var swiper2 = new Swiper(".client1Swiper", {
                         </div>
                         <div class="wized-2-body">
                             <ul>
-                                <li><a href="#home"><i class="fal fa-chevron-double-right"></i>Home
+                                <li><a href="index.html"><i class="fal fa-chevron-double-right"></i>Home
                                     </a></li>
-                                <li><a href="#about"><i class="fal fa-chevron-double-right"></i>
+                                <li><a href="aboutus.html"><i class="fal fa-chevron-double-right"></i>
                                         About us</a></li>
-                                <li><a href="#portfolio"><i class="fal fa-chevron-double-right"></i>Gallery
+                                <li><a href="index.html#portfolio"><i class="fal fa-chevron-double-right"></i>Gallery
                                     </a></li>
-                                <li><a href="#team"><i class="fal fa-chevron-double-right"></i>Association
+                                <li><a href="team.html"><i class="fal fa-chevron-double-right"></i>Association
                                     </a></li>
-                                <li><a href="#event"><i class="fal fa-chevron-double-right"></i>Events
+                                <li><a href="event.html"><i class="fal fa-chevron-double-right"></i>Events
                                     </a></li>
                             </ul>
                         </div>
@@ -1163,7 +1102,7 @@ var swiper2 = new Swiper(".client1Swiper", {
                                         Thirumangalam, Madurai - 625706, Tamil Nadu, India.</a>
                                 </div>
                             </div>
-                               <div class="contact-info-1">
+                            <div class="contact-info-1">
                                 <div class="icon">
                                     <i class="fab fa-instagram"></i>
                                 </div>
@@ -1239,7 +1178,7 @@ var swiper2 = new Swiper(".client1Swiper", {
                             <a href="#">Thirumalai builder, no - 32, jawagar nagar - 7th Street, pudhu nagar,
                                 Thirumangalam, Madurai - 625706</a>
                         </div>
-                       
+
                         <!-- single ENd -->
                     </div>
                     <div class="social-wrapper-two menu">
@@ -1256,21 +1195,21 @@ var swiper2 = new Swiper(".client1Swiper", {
             <nav class="nav-main mainmenu-nav mt--30">
                 <ul class="mainmenu metismenu" id="mobile-menu-active">
                     <li class="main-nav mega-menu project-a-after">
-                        <a href="#home">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
 
                     <li class="main-nav mega-menu">
-                        <a href="#about">About us </a>
+                        <a href="aboutus.html">About us </a>
                     </li>
                     <li class="main-nav project-a-after">
-                        <a href="#portfolio">Gallery</a>
+                        <a href="index.html#portfolio">Gallery</a>
                     </li>
                     <li class="main-nav mega-menu">
-                        <a href="#team">Association</a>
+                        <a href="team.html">Association</a>
                     </li>
 
                     <li class="main-nav project-a-after">
-                        <a href="#event">Events</a>
+                        <a href="event.html">Events</a>
                     </li>
 
                 </ul>
@@ -1306,18 +1245,6 @@ var swiper2 = new Swiper(".client1Swiper", {
     <!-- inner menu area desktop End -->
 
 
-    <!-- offcanvase search -->
-    <div class="search-input-area">
-        <div class="container">
-            <div class="search-input-inner">
-                <div class="input-div">
-                    <input class="search-input autocomplete" type="text" placeholder="Search by keyword or #">
-                    <button><i class="far fa-search"></i></button>
-                </div>
-            </div>
-        </div>
-        <div id="close" class="search-close-icon"><i class="far fa-times"></i></div>
-    </div>
     <div id="anywhere-home" class="">
     </div>
 
@@ -1336,7 +1263,6 @@ var swiper2 = new Swiper(".client1Swiper", {
     <script defer src="assets/js/plugins/jquery.js"></script>
 
     <script defer src="assets/js/plugins/odometer.js"></script>
-    <script defer src="assets/js/plugins/jquery-appear.js"></script>
     <!-- Bootstrap Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
@@ -1346,11 +1272,9 @@ var swiper2 = new Swiper(".client1Swiper", {
     <script defer src="assets/js/plugins/scroll-trigger.js"></script>
     <script defer src="assets/js/plugins/smooth-scroll.js"></script>
     <script defer src="assets/js/plugins/metismenu.js"></script>
-    <script defer src="assets/js/plugins/popup.js"></script>
 
     <script defer src="assets/js/vendor/bootstrap.min.js"></script>
     <script defer src="assets/js/plugins/swiper.js"></script>
-    <script defer src="assets/js/plugins/contact.form.js"></script>
 
     <script defer src="assets/js/main.js"></script>
 </body>
