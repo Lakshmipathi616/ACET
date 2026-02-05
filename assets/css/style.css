@@ -7028,11 +7028,11 @@ body.loaded #loader {
 }
 
 .pt--100 {
-  padding-top: 100px;
+  padding-top: 51px;
 }
 
 .pb--100 {
-  padding-bottom: 100px;
+  padding-bottom: 51px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
