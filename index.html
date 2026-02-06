@@ -21,6 +21,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&amp;display=swap"
         rel="stylesheet preload" as="style">
     <link rel="stylesheet preload" href="assets/css/style.css" as="style">
+    <link rel="stylesheet" href="assets/css/success-popup.css">
 </head>
 
 <body class="investment-home onepage">
@@ -962,6 +963,43 @@
         // Replace with your Google Apps Script Web App URL
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzZojKRku8QfZuLvqOcbnwOwfspvZx81dCAVslTHs3BY_klIrQmA12vrvfL68AJbcbKlg/exec ';
 
+        // Function to show success popup
+        function showSuccessPopup(formData) {
+            const popup = document.getElementById('successPopup');
+
+            // Populate popup with form data
+            document.getElementById('popup-name').textContent = formData.name;
+            document.getElementById('popup-email').textContent = formData.email;
+            document.getElementById('popup-phone').textContent = formData.phone;
+
+            // Show popup with animation
+            popup.style.display = 'flex';
+            setTimeout(() => {
+                popup.classList.add('show');
+            }, 10);
+        }
+
+        // Function to close success popup
+        function closeSuccessPopup() {
+            const popup = document.getElementById('successPopup');
+            popup.classList.remove('show');
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 300);
+        }
+
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function (event) {
+            const popup = document.getElementById('successPopup');
+            const popupContainer = document.querySelector('.success-popup-container');
+
+            if (event.target === popup) {
+                closeSuccessPopup();
+            }
+        });
+
+        // Form submission handler
         document.getElementById('contactForm').addEventListener('submit', async function (e) {
             e.preventDefault();
 
@@ -993,12 +1031,11 @@
                     body: JSON.stringify(formData)
                 });
 
-                successMsg.style.display = 'block';
-                document.getElementById('contactForm').reset();
+                // Show success popup instead of simple message
+                showSuccessPopup(formData);
 
-                setTimeout(() => {
-                    successMsg.style.display = 'none';
-                }, 5000);
+                // Reset form
+                document.getElementById('contactForm').reset();
 
             } catch (error) {
                 console.error('Submit error:', error);
@@ -1009,8 +1046,68 @@
             }
         });
 
+
+
     </script>
     <!-- Contact end-->
+
+    <!-- Success Popup Modal -->
+    <div id="successPopup" class="success-popup-overlay">
+        <div class="success-popup-container">
+            <button class="success-popup-close" onclick="closeSuccessPopup()">&times;</button>
+
+            <div class="success-popup-content">
+                <!-- Left Side - Colorful Background -->
+                <div class="success-popup-left">
+                    <div class="success-image-wrapper">
+                        <img src="assets/images/portfolio/icons/QR copy.webp" alt="Success" class="success-image">
+                    </div>
+
+                    <h3 class="success-message">Join ACET!</h3>
+                    <p class="success-subtitle">Scan and pay the membership fee to become an ACET member.</p>
+                </div>
+
+                <!-- Right Side - Details -->
+                <div class="success-popup-right">
+                    <h2 class="popup-title">Thank You!</h2>
+                    <p class="popup-subtitle">We received your enquiry</p>
+
+                    <div class="success-details-card">
+                        <div class="detail-item">
+                            <i class="fas fa-user detail-icon"></i>
+                            <div class="detail-content">
+                                <span class="detail-label">Name</span>
+                                <span class="detail-value" id="popup-name"></span>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fas fa-envelope detail-icon"></i>
+                            <div class="detail-content">
+                                <span class="detail-label">Email</span>
+                                <span class="detail-value" id="popup-email"></span>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fas fa-phone detail-icon"></i>
+                            <div class="detail-content">
+                                <span class="detail-label">Phone</span>
+                                <span class="detail-value" id="popup-phone"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="popup-action-btn" onclick="closeSuccessPopup()">
+                        <i class="fas fa-check-circle"></i> Got it!
+                    </button>
+
+                    <p class="popup-footer-text">We'll get back to you shortly</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="rts-footer-area pt--100 pb--100 pt_sm--50 pb_sm--40 footer-two footer-bg-two">
         <div class="container mb-20">
             <div class="row gy-4">
@@ -1044,11 +1141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-5 text-center">
-                        <a class="rts-btn btn-primary" href="#contact">
-                            Touch with Us
-                        </a>
-                    </div>
+
 
                 </div>
 

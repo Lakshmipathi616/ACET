@@ -1,0 +1,349 @@
+/* ==============================================
+   SUCCESS POPUP MODAL STYLES
+   ============================================== */
+
+/* Overlay */
+.success-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.success-popup-overlay.show {
+    opacity: 1;
+}
+
+/* Popup Container */
+.success-popup-container {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 750px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.success-popup-overlay.show .success-popup-container {
+    transform: scale(1);
+}
+
+/* Close Button */
+.success-popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.success-popup-close:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Popup Content - Two Column Layout */
+.success-popup-content {
+    display: flex;
+    min-height: 500px;
+}
+
+/* Left Side - Colorful Background */
+.success-popup-left {
+    flex: 0 0 40%;
+    background: linear-gradient(135deg,  #0e2a55,#0e2a55 50%, #0e2a55 100%);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.success-popup-left::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    animation: pulse-bg 3s ease-in-out infinite;
+}
+
+@keyframes pulse-bg {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.success-icon-wrapper {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.success-icon {
+    font-size: 100px;
+    color: #ffffff;
+    animation: success-bounce 0.6s ease;
+}
+
+@keyframes success-bounce {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-message {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.success-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Right Side - Details */
+.success-popup-right {
+    flex: 1;
+    padding: 50px 40px;
+    background: #ffffff;
+}
+
+.popup-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.popup-subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Details Card */
+.success-details-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.detail-item:first-child {
+    padding-top: 0;
+}
+
+.detail-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #0e2a55 0%, #0e2a55 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.detail-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    font-size: 15px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Action Button */
+.popup-action-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #0e2a55 0%, #0e2a55 100%);
+    color: #ffffff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.popup-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(130, 180, 64, 0.3);
+}
+
+.popup-action-btn i {
+    font-size: 18px;
+}
+
+.popup-footer-text {
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .success-popup-content {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .success-popup-left {
+        flex: none;
+        padding: 40px 30px;
+    }
+
+    .success-icon {
+        font-size: 70px;
+    }
+
+    .success-message {
+        font-size: 28px;
+    }
+
+    .success-popup-right {
+        padding: 30px 25px;
+    }
+
+    .popup-title {
+        font-size: 24px;
+    }
+
+    .success-details-card {
+        padding: 20px;
+    }
+
+    .detail-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-popup-container {
+        width: 95%;
+        border-radius: 16px;
+    }
+
+    .success-popup-left {
+        padding: 30px 20px;
+    }
+
+    .success-icon {
+        font-size: 60px;
+    }
+
+    .success-message {
+        font-size: 24px;
+    }
+
+    .success-popup-right {
+        padding: 25px 20px;
+    }
+
+    .popup-title {
+        font-size: 22px;
+    }
+
+    .detail-item {
+        gap: 12px;
+    }
+
+    .detail-value {
+        font-size: 14px;
+    }
+
+    .popup-action-btn {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+}
