@@ -30,10 +30,13 @@
     overflow: hidden;
     max-width: 750px;
     width: 90%;
+    max-height: 90vh;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     transform: scale(0.9);
     transition: transform 0.3s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .success-popup-overlay.show .success-popup-container {
@@ -70,6 +73,8 @@
 .success-popup-content {
     display: flex;
     min-height: 500px;
+    flex: 1;
+    overflow-y: auto;
 }
 
 /* Left Side - Colorful Background */
@@ -296,6 +301,7 @@
     .success-popup-container {
         max-width: 650px;
         width: 92%;
+        max-height: 85vh;
     }
 
     .success-popup-content {
@@ -329,11 +335,13 @@
     .success-popup-container {
         width: 90%;
         max-width: 500px;
+        max-height: 90vh;
     }
 
     .success-popup-content {
         flex-direction: column;
         min-height: auto;
+        overflow-y: visible;
     }
 
     .success-popup-left {
@@ -348,12 +356,14 @@
     }
 
     .success-popup-close {
+        position: fixed;
         top: 15px;
         right: 15px;
         width: 36px;
         height: 36px;
         font-size: 20px;
         background: rgba(255, 255, 255, 0.2);
+        z-index: 10001;
     }
 
     .success-popup-close:hover {
@@ -420,6 +430,7 @@
         width: 95%;
         border-radius: 20px;
         max-width: none;
+        max-height: 95vh;
         margin: 0 10px;
     }
 
