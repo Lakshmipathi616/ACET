@@ -7522,7 +7522,7 @@ body.loaded #loader {
    BREADCRUMB AREA STYLES
    ============================================ */
 .breadcrumb-area {
-  background: url('../images/banner/breadcrumbs Dark copy.webp') center/cover;
+  background: url('../images/banner/breadcrumbs view.webp') center/cover;
   padding: 100px 0 100px;
   position: relative;
   overflow: hidden;
@@ -7531,6 +7531,37 @@ body.loaded #loader {
 .breadcrumb-content {
   position: relative;
   z-index: 2;
+}
+
+/* ============================================
+   BREADCRUMB RESPONSIVE BACKGROUNDS
+   ============================================ */
+/* Tablet devices (768px to 991px) */
+@media (max-width: 991px) {
+  .breadcrumb-area {
+    
+     background: url('../images/banner/breadcrumbs view.webp') center/cover; 
+  }
+}
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  .breadcrumb-area {
+
+     background: url('../images/banner/breadcrumbs view.webp') center/cover; 
+    padding: 80px 0 80px;
+    /* Reduced padding for mobile */
+  }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .breadcrumb-area {
+
+    background: url('../images/banner/breadcrumbs view.webp') center/cover; 
+    padding: 60px 0 60px;
+  
+  }
 }
 
 
@@ -7847,3 +7878,4 @@ body.loaded #loader {
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
 }
+
