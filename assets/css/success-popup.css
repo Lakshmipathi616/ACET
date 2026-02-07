@@ -10,8 +10,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
     z-index: 10000;
     justify-content: center;
     align-items: center;
@@ -23,38 +23,36 @@
     opacity: 1;
 }
 
-/* Popup Container */
-.success-popup-container {
+/* Popup Box */
+.success-popup-box {
     background: #ffffff;
-    border-radius: 24px;
-    overflow: hidden;
-    max-width: 750px;
+    border-radius: 20px;
+    padding: 50px 40px;
+    max-width: 500px;
     width: 90%;
-    max-height: 90vh;
+    text-align: center;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     transform: scale(0.9);
     transition: transform 0.3s ease;
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
-.success-popup-overlay.show .success-popup-container {
+.success-popup-overlay.show .success-popup-box {
     transform: scale(1);
 }
 
 /* Close Button */
 .success-popup-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.1);
+    top: 15px;
+    right: 15px;
+    background: transparent;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    font-size: 24px;
-    color: #ffffff;
+    font-size: 20px;
+    color: #999;
     cursor: pointer;
     z-index: 10;
     transition: all 0.3s ease;
@@ -65,66 +63,28 @@
 }
 
 .success-popup-close:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
     transform: rotate(90deg);
 }
 
-/* Popup Content - Two Column Layout */
-.success-popup-content {
+/* Success Icon Circle */
+.success-icon-circle {
+    width: 120px;
+    height: 120px;
+    background: #82b440;
+    border-radius: 50%;
     display: flex;
-    min-height: 500px;
-    flex: 1;
-    overflow-y: auto;
-}
-
-/* Left Side - Colorful Background */
-.success-popup-left {
-    flex: 0 0 40%;
-    background: linear-gradient(135deg, #0e2a55, #0e2a55 50%, #0e2a55 100%);
-    padding: 60px 40px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.success-popup-left::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
-    animation: pulse-bg 3s ease-in-out infinite;
-}
-
-@keyframes pulse-bg {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-}
-
-.success-icon-wrapper {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 30px;
-}
-
-.success-icon {
-    font-size: 100px;
-    color: #ffffff;
+    margin: 0 auto 30px;
     animation: success-bounce 0.6s ease;
+    box-shadow: 0 10px 30px rgba(130, 180, 64, 0.3);
+}
+
+.success-icon-circle i {
+    font-size: 60px;
+    color: #ffffff;
 }
 
 @keyframes success-bounce {
@@ -134,7 +94,7 @@
     }
 
     50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     100% {
@@ -143,443 +103,359 @@
     }
 }
 
-.success-message {
+/* Success Title */
+.success-title {
     font-size: 36px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 10px;
-    position: relative;
-    z-index: 1;
-}
-
-.success-subtitle {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.9);
-    position: relative;
-    z-index: 1;
-    text-align: center;
-}
-
-/* Right Side - Details */
-.success-popup-right {
-    flex: 1;
-    padding: 50px 40px;
-    background: #ffffff;
-}
-
-.popup-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 8px;
-}
-
-.popup-subtitle {
-    font-size: 15px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-/* Details Card */
-.success-details-card {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 16px;
-    padding: 25px;
-    margin-bottom: 30px;
-}
-
-.detail-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.detail-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.detail-item:first-child {
-    padding-top: 0;
-}
-
-.detail-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #0e2a55 0%, #0e2a55 100%);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 18px;
-    flex-shrink: 0;
-}
-
-.detail-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.detail-label {
-    font-size: 12px;
-    color: #666;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.detail-value {
-    font-size: 15px;
-    color: #1a1a1a;
     font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
 }
 
-/* Action Button */
-.popup-action-btn {
-    width: 100%;
-    background: linear-gradient(135deg, #0e2a55 0%, #0e2a55 100%);
+/* Success Message */
+.success-message {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    padding: 0 20px;
+}
+
+/* OK Button */
+.success-ok-btn {
+    background: #82b440;
     color: #ffffff;
     border: none;
-    padding: 16px 32px;
+    padding: 16px 80px;
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 20px rgba(130, 180, 64, 0.3);
 }
 
-.popup-action-btn:hover {
+.success-ok-btn:hover {
+    background: #73a138;
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px #0e2a55 (130, 180, 64, 0.3);
+    box-shadow: 0 12px 25px rgba(130, 180, 64, 0.4);
 }
 
-.popup-action-btn i {
-    font-size: 18px;
-}
-
-.popup-footer-text {
-    text-align: center;
-    font-size: 13px;
-    color: #999;
-    margin-top: 15px;
-    margin-bottom: 0;
-}
-
-/* QR Code Image Styling */
-.success-image-wrapper {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.success-image {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background: #ffffff;
-    padding: 10px;
+.success-ok-btn:active {
+    transform: translateY(0);
 }
 
 /* Responsive Design */
-/* Tablet Devices (Portrait) */
-@media (max-width: 1024px) {
-    .success-popup-container {
-        max-width: 650px;
-        width: 92%;
-        max-height: 85vh;
+
+/* Large Desktop (1920px and above) */
+@media (min-width: 1920px) {
+    .success-popup-box {
+        max-width: 550px;
+        padding: 60px 50px;
     }
 
-    .success-popup-content {
-        min-height: 450px;
+    .success-icon-circle {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 35px;
     }
 
-    .success-popup-left {
-        padding: 50px 35px;
-    }
-
-    .success-popup-right {
-        padding: 45px 35px;
-    }
-
-    .popup-title {
-        font-size: 26px;
-    }
-
-    .success-message {
-        font-size: 32px;
-    }
-
-    .success-image-wrapper {
-        max-width: 180px;
-        margin-bottom: 25px;
-    }
-}
-
-/* Mobile Devices (Landscape) & Tablet (Portrait) */
-@media (max-width: 768px) {
-    .success-popup-container {
-        width: 90%;
-        max-width: 500px;
-        max-height: 90vh;
-    }
-
-    .success-popup-content {
-        flex-direction: column;
-        min-height: auto;
-        overflow-y: visible;
-    }
-
-    .success-popup-left {
-        flex: none;
-        padding: 40px 30px;
-        border-radius: 24px 24px 0 0;
-    }
-
-    .success-popup-right {
-        padding: 35px 30px;
-        border-radius: 0 0 24px 24px;
-    }
-
-    .success-popup-close {
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        width: 36px;
-        height: 36px;
-        font-size: 20px;
-        background: rgba(255, 255, 255, 0.2);
-        z-index: 10001;
-    }
-
-    .success-popup-close:hover {
-        background: rgba(255, 255, 255, 0.3);
-    }
-
-    .success-image-wrapper {
-        max-width: 160px;
-        margin-bottom: 20px;
-    }
-
-    .success-icon {
+    .success-icon-circle i {
         font-size: 70px;
     }
 
+    .success-title {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
     .success-message {
-        font-size: 28px;
-        text-align: center;
+        font-size: 18px;
+        margin-bottom: 40px;
     }
 
-    .success-subtitle {
-        font-size: 15px;
-    }
-
-    .popup-title {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .popup-subtitle {
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 25px;
-    }
-
-    .success-details-card {
-        padding: 20px;
-        margin-bottom: 25px;
-    }
-
-    .detail-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
-    }
-
-    .detail-label {
-        font-size: 11px;
-    }
-
-    .detail-value {
-        font-size: 14px;
-    }
-
-    .popup-action-btn {
-        padding: 15px 30px;
-        font-size: 15px;
+    .success-ok-btn {
+        padding: 18px 90px;
+        font-size: 20px;
     }
 }
 
-/* Mobile Devices (Portrait) */
-@media (max-width: 480px) {
-    .success-popup-container {
+/* Desktop (1200px to 1919px) */
+@media (min-width: 1200px) and (max-width: 1919px) {
+    .success-popup-box {
+        max-width: 520px;
+    }
+}
+
+/* Tablet Landscape (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .success-popup-box {
+        max-width: 480px;
+        padding: 45px 35px;
+    }
+
+    .success-icon-circle {
+        width: 110px;
+        height: 110px;
+        margin-bottom: 28px;
+    }
+
+    .success-icon-circle i {
+        font-size: 55px;
+    }
+
+    .success-title {
+        font-size: 34px;
+        margin-bottom: 18px;
+    }
+
+    .success-message {
+        font-size: 15px;
+        margin-bottom: 32px;
+    }
+
+    .success-ok-btn {
+        padding: 15px 75px;
+        font-size: 17px;
+    }
+}
+
+/* Tablet Portrait (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .success-popup-box {
+        padding: 40px 30px;
+        max-width: 450px;
+        width: 85%;
+    }
+
+    .success-icon-circle {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 25px;
+    }
+
+    .success-icon-circle i {
+        font-size: 50px;
+    }
+
+    .success-title {
+        font-size: 32px;
+        margin-bottom: 18px;
+    }
+
+    .success-message {
+        font-size: 15px;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+
+    .success-ok-btn {
+        padding: 15px 70px;
+        font-size: 17px;
+    }
+
+    .success-popup-close {
+        width: 33px;
+        height: 33px;
+        font-size: 19px;
+    }
+}
+
+/* Mobile Landscape & Small Tablets (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .success-popup-box {
+        padding: 38px 28px;
+        width: 90%;
+        max-width: 420px;
+    }
+
+    .success-icon-circle {
+        width: 95px;
+        height: 95px;
+        margin-bottom: 22px;
+    }
+
+    .success-icon-circle i {
+        font-size: 48px;
+    }
+
+    .success-title {
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+
+    .success-message {
+        font-size: 14px;
+        margin-bottom: 28px;
+        padding: 0 12px;
+    }
+
+    .success-ok-btn {
+        padding: 14px 65px;
+        font-size: 16px;
+    }
+
+    .success-popup-close {
+        top: 13px;
+        right: 13px;
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+}
+
+/* Mobile Portrait (361px to 480px) */
+@media (min-width: 361px) and (max-width: 480px) {
+    .success-popup-box {
+        padding: 35px 25px;
         width: 95%;
-        border-radius: 20px;
-        max-width: none;
-        max-height: 95vh;
-        margin: 0 10px;
+        max-width: 380px;
+        border-radius: 16px;
     }
 
-    .success-popup-content {
-        border-radius: 20px;
+    .success-icon-circle {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 20px;
     }
 
-    .success-popup-left {
-        padding: 30px 20px;
-        border-radius: 20px 20px 0 0;
+    .success-icon-circle i {
+        font-size: 45px;
     }
 
-    .success-popup-right {
-        padding: 30px 20px;
-        border-radius: 0 0 20px 20px;
+    .success-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .success-message {
+        font-size: 14px;
+        margin-bottom: 25px;
+        padding: 0 10px;
+        line-height: 1.5;
+    }
+
+    .success-ok-btn {
+        padding: 14px 60px;
+        font-size: 16px;
+        border-radius: 10px;
     }
 
     .success-popup-close {
         top: 12px;
         right: 12px;
-        width: 32px;
-        height: 32px;
-        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        font-size: 17px;
+    }
+}
+
+/* Small Mobile (321px to 360px) */
+@media (min-width: 321px) and (max-width: 360px) {
+    .success-popup-box {
+        padding: 30px 20px;
+        width: 96%;
     }
 
-    .success-image-wrapper {
-        max-width: 140px;
-        margin-bottom: 15px;
+    .success-icon-circle {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 18px;
     }
 
-    .success-image {
-        border-radius: 10px;
-        padding: 8px;
+    .success-icon-circle i {
+        font-size: 40px;
     }
 
-    .success-icon {
-        font-size: 60px;
+    .success-title {
+        font-size: 24px;
+        margin-bottom: 12px;
     }
 
     .success-message {
-        font-size: 24px;
-        margin-bottom: 8px;
-    }
-
-    .success-subtitle {
-        font-size: 14px;
-        padding: 0 10px;
-    }
-
-    .popup-title {
-        font-size: 22px;
-    }
-
-    .popup-subtitle {
         font-size: 13px;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
+        padding: 0 8px;
+        line-height: 1.5;
     }
 
-    .success-details-card {
-        padding: 18px;
-        margin-bottom: 20px;
+    .success-ok-btn {
+        padding: 12px 50px;
+        font-size: 15px;
+    }
+
+    .success-popup-close {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Extra Small Mobile (280px to 320px) */
+@media (max-width: 320px) {
+    .success-popup-box {
+        padding: 25px 18px;
+        width: 98%;
         border-radius: 14px;
     }
 
-    .detail-item {
-        gap: 12px;
-        padding: 12px 0;
+    .success-icon-circle {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
     }
 
-    .detail-icon {
-        width: 32px;
-        height: 32px;
+    .success-icon-circle i {
+        font-size: 35px;
+    }
+
+    .success-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .success-message {
+        font-size: 12px;
+        margin-bottom: 20px;
+        padding: 0 5px;
+        line-height: 1.4;
+    }
+
+    .success-ok-btn {
+        padding: 11px 45px;
         font-size: 14px;
         border-radius: 8px;
     }
 
-    .detail-label {
-        font-size: 10px;
-    }
-
-    .detail-value {
-        font-size: 13px;
-        word-break: break-word;
-    }
-
-    .popup-action-btn {
-        padding: 14px 24px;
-        font-size: 14px;
-        border-radius: 10px;
-    }
-
-    .popup-action-btn i {
-        font-size: 16px;
-    }
-
-    .popup-footer-text {
-        font-size: 12px;
-        margin-top: 12px;
+    .success-popup-close {
+        width: 26px;
+        height: 26px;
+        font-size: 15px;
+        top: 8px;
+        right: 8px;
     }
 }
 
-/* Extra Small Devices */
-@media (max-width: 360px) {
-    .success-popup-container {
-        width: 96%;
-        margin: 0 8px;
-    }
+/* Accessibility: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
 
-    .success-popup-left {
-        padding: 25px 15px;
+    .success-popup-overlay,
+    .success-popup-box,
+    .success-icon-circle,
+    .success-ok-btn,
+    .success-popup-close {
+        animation: none !important;
+        transition: none !important;
     }
+}
 
-    .success-popup-right {
-        padding: 25px 15px;
-    }
-
-    .success-image-wrapper {
-        max-width: 120px;
-    }
-
-    .success-message {
-        font-size: 20px;
-    }
-
-    .success-subtitle {
-        font-size: 13px;
-    }
-
-    .popup-title {
-        font-size: 20px;
-    }
-
-    .success-details-card {
-        padding: 15px;
-    }
-
-    .detail-item {
-        gap: 10px;
-        padding: 10px 0;
-    }
-
-    .detail-icon {
-        width: 30px;
-        height: 30px;
-        font-size: 13px;
-    }
-
-    .popup-action-btn {
-        padding: 12px 20px;
-        font-size: 13px;
+/* Print Styles */
+@media print {
+    .success-popup-overlay {
+        display: none !important;
     }
 }

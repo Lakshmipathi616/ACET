@@ -5647,8 +5647,8 @@ header.header--sticky.sticky .nav-area ul li.main-nav {
 @media only screen and (max-width: 767px) {
   .call-and-sign-area {
     flex-wrap: wrap;
-    gap: 20px !important;
-    margin-top: 30px;
+    gap: 1px !important;
+    margin-top: -35px;
   }
 }
 
@@ -6031,7 +6031,7 @@ body.loaded #loader {
 .footer-two-single-wized .contact-info-1 {
   display: flex;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 10px;
   margin-bottom: 18px;
 }
 
@@ -6047,8 +6047,8 @@ body.loaded #loader {
   content: "";
   z-index: -1;
   border-radius: 50%;
-  left: 50%;
-  top: 50%;
+  left: 60%;
+  top: 60%;
   transform: translate(-50%, -50%);
   background: #fff;
   box-shadow: 0px 9px 18px rgba(24, 16, 16, 0.05);
@@ -7539,8 +7539,8 @@ body.loaded #loader {
 /* Tablet devices (768px to 991px) */
 @media (max-width: 991px) {
   .breadcrumb-area {
-    
-     background: url('../images/banner/breadcrumbs view.webp') center/cover; 
+
+    background: url('../images/banner/breadcrumbs view.webp') center/cover;
   }
 }
 
@@ -7548,7 +7548,7 @@ body.loaded #loader {
 @media (max-width: 767px) {
   .breadcrumb-area {
 
-     background: url('../images/banner/breadcrumbs view.webp') center/cover; 
+    background: url('../images/banner/breadcrumbs view.webp') center/cover;
     padding: 80px 0 80px;
     /* Reduced padding for mobile */
   }
@@ -7558,9 +7558,9 @@ body.loaded #loader {
 @media (max-width: 480px) {
   .breadcrumb-area {
 
-    background: url('../images/banner/breadcrumbs view.webp') center/cover; 
+    background: url('../images/banner/breadcrumbs view.webp') center/cover;
     padding: 60px 0 60px;
-  
+
   }
 }
 
@@ -7879,3 +7879,169 @@ body.loaded #loader {
   box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
 }
 
+/* Make social media icons clickable */
+.social-link {
+  cursor: pointer;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 42, 85, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* MAIN CARD */
+.payment-popup {
+  display: flex;
+  width: 900px;
+  max-width: 95%;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* LEFT - QR SECTION */
+.payment-left {
+  width: 40%;
+  background: #0e2a55;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-image-left {
+  max-width: 240px;
+  width: 100%;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 14px;
+}
+
+.scan-text {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* RIGHT - CONTENT */
+.payment-right {
+  width: 60%;
+  padding: 40px;
+  position: relative;
+  color: #0e2a55;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #0e2a55;
+}
+
+.payment-right h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 22px;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 22px;
+}
+
+.benefits li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #0e2a55;
+}
+
+.price-text {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.popup-btn {
+  width: 50%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #0e2a55;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: center;
+}
+
+.popup-btn:hover {
+  background: #143b78;
+}
+
+/* ========================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .payment-popup {
+    width: 95%;
+  }
+
+  .payment-right h2 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .payment-popup {
+    flex-direction: column;
+  }
+
+  .payment-left,
+  .payment-right {
+    width: 100%;
+  }
+
+  .payment-left {
+    padding: 30px 20px;
+  }
+
+  .payment-right {
+    padding: 30px 20px;
+  }
+
+  .qr-image-left {
+    max-width: 200px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .payment-right h2 {
+    font-size: 22px;
+  }
+
+  .subtitle,
+  .benefits li,
+  .price-text {
+    font-size: 13px;
+  }
+}

@@ -32,23 +32,6 @@
             <img src="assets/images/logo/ACET Logo copy.webp" alt="Website Logo" class="loader-logo">
         </div>
     </div>
-    <script>
-        window.addEventListener('load', function () {
-            // Check if first time visiting
-            var isFirstVisit = !localStorage.getItem('visitedBefore');
-
-            // First visit: 5 seconds, Return visit: 2 seconds
-            var loaderTime = isFirstVisit ? 5000 : 2000;
-
-            setTimeout(function () {
-                document.body.classList.add('loader');
-                // Mark as visited
-                localStorage.setItem('visitedBefore', 'true');
-            }, loaderTime);
-        });
-    </script>
-
-
     <!-- Loader End -->
 
     <header class="header-one style-four header--sticky header-investment">
@@ -99,7 +82,7 @@
                                             <a href="#portfolio">Gallery</a>
                                         </li>
                                         <li class="main-nav mega-menu">
-                                            <a href="team.html">Association</a>
+                                            <a href="team.html">Members</a>
                                         </li>
                                         <li class="main-nav project-a-after">
                                             <a href="event.html">Events</a>
@@ -142,7 +125,11 @@
                                 to the development of
                                 Thirumangalam and the surrounding regions.
                             </p>
-                            <a href="#about" class="rts-btn btn-primary color-h-black">Explore More</a>
+                            <a href="javascript:void(0)" class="rts-btn btn-primary color-h-black"
+                                onclick="openPopup()">
+                                Join us ACET
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -152,6 +139,7 @@
             <img src="assets/images\banner/small-img/bb2.png" alt="">
         </div>
     </div>
+    
     <div class="image-slider-area">
         <div class="swiper imageSlider">
             <div class="swiper-wrapper">
@@ -208,6 +196,7 @@
             </div>
         </div>
     </div>
+
 
 
     <!-- rts progress area start -->
@@ -275,7 +264,7 @@
     <!-- rts progress area end -->
 
     <!-- rts about area start -->
-    <div id="about" class="rts-about-area-two rts-section-gapBottom investment">
+    <div id="about" class="rts-about-area-two rts-section-gapBottom investment pt--40">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -308,7 +297,7 @@
                                 Tamil Nadu & Puducherry, strengthening collaboration and representation at the state
                                 level.
                             </p>
-                            <div class="call-and-sign-area ">
+                            <div class="call-and-sign-area gap-4 ">
                                 <div class="call-area py-5">
                                     <div class="icon">
                                         <i class="fa-sharp fa-regular fa-phone-volume"></i>
@@ -320,7 +309,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="call-area d-flex align-items-center gap-3 ">
+                                <div class="call-area d-flex align-items-center gap-4 ">
                                     <div class="icon-email">
                                         <i class=" fal fa-envelope  fs-2"></i>
                                     </div>
@@ -341,7 +330,7 @@
 
 
         <!-- Gallery start -->
-        <div id="portfolio" class="rts-business-case-area rts-section-gap investment">
+        <div id="portfolio" class="rts-business-case-area rts-section-gap investment pt--40">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -465,13 +454,15 @@
                                                         <i class="fal fa-plus"></i>
                                                     </div>
                                                     <div class="team-social-one">
-                                                        <i class="fab fa-youtube"></i>
-                                                        <i class="fab fa-twitter"></i>
-                                                        <i class="fab fa-instagram"></i>
+                                                        <i class="fab fa-facebook-f social-link"
+                                                            data-url="https://www.facebook.com/profile"></i>
+                                                        <i class="fab fa-instagram social-link"
+                                                            data-url="https://www.instagram.com/profile"></i>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
+
                                         <div class="single-details">
                                             <a href="#">
                                                 <h5 class="title">Er.R. Ravichandran</h5>
@@ -490,9 +481,11 @@
                                                         <i class="fal fa-plus"></i>
                                                     </div>
                                                     <div class="team-social-one">
-                                                        <i class="fab fa-youtube"></i>
-                                                        <i class="fab fa-twitter"></i>
-                                                        <i class="fab fa-instagram"></i>
+
+                                                        <i class="fab fa-facebook-f social-link"
+                                                            data-url="https://www.facebook.com/profile"></i>
+                                                        <i class="fab fa-instagram social-link"
+                                                            data-url="https://www.instagram.com/profile"></i>
                                                     </div>
                                                 </div>
                                             </a>
@@ -515,9 +508,10 @@
                                                         <i class="fal fa-plus"></i>
                                                     </div>
                                                     <div class="team-social-one">
-                                                        <i class="fab fa-youtube"></i>
-                                                        <i class="fab fa-twitter"></i>
-                                                        <i class="fab fa-instagram"></i>
+                                                        <i class="fab fa-facebook-f social-link"
+                                                            data-url="https://www.facebook.com/profile"></i>
+                                                        <i class="fab fa-instagram social-link"
+                                                            data-url="https://www.instagram.com/profile"></i>
                                                     </div>
                                                 </div>
                                             </a>
@@ -540,9 +534,11 @@
                                                         <i class="fal fa-plus"></i>
                                                     </div>
                                                     <div class="team-social-one">
-                                                        <i class="fab fa-youtube"></i>
-                                                        <i class="fab fa-twitter"></i>
-                                                        <i class="fab fa-instagram"></i>
+
+                                                        <i class="fab fa-facebook-f social-link"
+                                                            data-url="https://www.facebook.com/profile"></i>
+                                                        <i class="fab fa-instagram social-link"
+                                                            data-url="https://www.instagram.com/profile"></i>
                                                     </div>
                                                 </div>
                                             </a>
@@ -565,9 +561,11 @@
                                                         <i class="fal fa-plus"></i>
                                                     </div>
                                                     <div class="team-social-one">
-                                                        <i class="fab fa-youtube"></i>
-                                                        <i class="fab fa-twitter"></i>
-                                                        <i class="fab fa-instagram"></i>
+
+                                                        <i class="fab fa-facebook-f social-link"
+                                                            data-url="https://www.facebook.com/profile"></i>
+                                                        <i class="fab fa-instagram social-link"
+                                                            data-url="https://www.instagram.com/profile"></i>
                                                     </div>
                                                 </div>
                                             </a>
@@ -592,9 +590,11 @@
                                                         <i class="fal fa-plus"></i>
                                                     </div>
                                                     <div class="team-social-one">
-                                                        <i class="fab fa-youtube"></i>
-                                                        <i class="fab fa-twitter"></i>
-                                                        <i class="fab fa-instagram"></i>
+
+                                                        <i class="fab fa-facebook-f social-link"
+                                                            data-url="https://www.facebook.com/profile"></i>
+                                                        <i class="fab fa-instagram social-link"
+                                                            data-url="https://www.instagram.com/profile"></i>
                                                     </div>
                                                 </div>
                                             </a>
@@ -619,9 +619,11 @@
                                                         <i class="fal fa-plus"></i>
                                                     </div>
                                                     <div class="team-social-one">
-                                                        <i class="fab fa-youtube"></i>
-                                                        <i class="fab fa-twitter"></i>
-                                                        <i class="fab fa-instagram"></i>
+
+                                                        <i class="fab fa-facebook-f social-link"
+                                                            data-url="https://www.facebook.com/profile"></i>
+                                                        <i class="fab fa-instagram social-link"
+                                                            data-url="https://www.instagram.com/profile"></i>
                                                     </div>
                                                 </div>
                                             </a>
@@ -646,7 +648,7 @@
         </div>
         <!-- rts team area end -->
 
-        <div class="rts-trusted-client rts-section-gap">
+        <div class="rts-trusted-client rts-section-gap pt--40">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -731,78 +733,6 @@
             </div>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-        <script>
-            /* First slider */
-            var swiper = new Swiper(".clientSwiper", {
-                slidesPerView: 4,
-                spaceBetween: 30,
-                loop: true,
-                speed: 4000,
-                autoplay: {
-
-                    disableOnInteraction: false,
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 2,
-                    },
-                    576: {
-                        slidesPerView: 3,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                    },
-                    992: {
-                        slidesPerView: 5,
-                    },
-                }
-            });
-
-            /* Second slider – momentum RIGHT */
-            var swiper2 = new Swiper(".client1Swiper", {
-                loop: true,
-                slidesPerView: 4,
-                spaceBetween: 30,
-                speed: 4000,   // smooth momentum
-                autoplay: {
-                    disableOnInteraction: false,
-                    reverseDirection: true   // moves RIGHT
-                },
-                allowTouchMove: true,
-                breakpoints: {
-                    320: { slidesPerView: 2 },
-                    576: { slidesPerView: 3 },
-                    768: { slidesPerView: 4 },
-                    992: { slidesPerView: 5 }
-                }
-            });
-
-            /* Team slider */
-            var teamSwiper = new Swiper(".mySwiperh1_team", {
-                slidesPerView: 4,
-                spaceBetween: 30,
-                loop: true,
-                speed: 1000,
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                breakpoints: {
-                    0: { slidesPerView: 1 },
-                    575: { slidesPerView: 2 },
-                    767: { slidesPerView: 3 },
-                    991: { slidesPerView: 3 },
-                    1300: { slidesPerView: 4 },
-                    1500: { slidesPerView: 4 }
-                }
-            });
-        </script>
 
 
         <!-- Event start -->
@@ -842,7 +772,8 @@
                                             <div
                                                 class="content position-absolute bottom-0 start-0 p-2 p-md-3 p-lg-4 w-100">
                                                 <h4 class="title fs-10 fs-md-3 fs-lg-4">Inaugural Function</h4>
-                                                <p class="desc small fs-md-10">The Inaugural Function of the Association
+                                                <p class="desc small fs-md-1 d-none d-md-block">The Inaugural Function
+                                                    of the Association
                                                     of Civil
                                                     Engineers Thirumangalam (ACET) marks the formal beginning of the
                                                     association with the installation of office.
@@ -860,7 +791,7 @@
                                             <div
                                                 class="content position-absolute bottom-0 start-0 p-2 p-md-5 p-lg-4 w-100">
                                                 <h4 class="title fs-10 fs-md-3 fs-lg-4">Regular Meeting</h4>
-                                                <p class="desc small fs-md-10">
+                                                <p class="desc small fs-md-1 d-none d-md-block">
                                                     The First Regular Meeting of the ACET marks the beginning of our
                                                     collective journey towards professional growth and knowledge sharing
                                                     among civil engineers.
@@ -879,7 +810,8 @@
                                                 class="content position-absolute bottom-0 start-0 p-2 p-md-5 p-lg-4 w-100">
                                                 <h4 class="title fs-20 fs-md-1 fs-lg-4">Regular Meeting – Engineer's Day
                                                     Celebration</h4>
-                                                <p class="desc small fs-md-1">ACET second meeting celebrates Engineers
+                                                <p class="desc small fs-md-1 d-none d-md-block">ACET second meeting
+                                                    celebrates Engineers
                                                     Day, honoring
                                                     profession, sharing technical insights among members.
                                                 </p>
@@ -896,7 +828,8 @@
                                                 class="content position-absolute bottom-0 start-0 p-2 p-md-5 p-lg-4 w-100">
                                                 <h4 class="title fs-20 fs-md-5 fs-lg-4">Regular Meeting – Pongal
                                                     Celebration</h4>
-                                                <p class="desc small fs-md-1">ACET third regular meeting blends New
+                                                <p class="desc small fs-md-1 d-none d-md-block">ACET third regular
+                                                    meeting blends New
                                                     Year 2026, diary
                                                     release, Pongal, fostering professional bonding togetherness.</p>
                                             </div>
@@ -966,11 +899,6 @@
         // Function to show success popup
         function showSuccessPopup(formData) {
             const popup = document.getElementById('successPopup');
-
-            // Populate popup with form data
-            document.getElementById('popup-name').textContent = formData.name;
-            document.getElementById('popup-email').textContent = formData.email;
-            document.getElementById('popup-phone').textContent = formData.phone;
 
             // Show popup with animation
             popup.style.display = 'flex';
@@ -1053,60 +981,31 @@
 
     <!-- Success Popup Modal -->
     <div id="successPopup" class="success-popup-overlay">
-        <div class="success-popup-container">
-            <button class="success-popup-close" onclick="closeSuccessPopup()">&times;</button>
+        <div class="success-popup-box">
+            <!-- Close Button -->
+            <button class="success-popup-close" onclick="closeSuccessPopup()" aria-label="Close popup">
+                <i class="fas fa-times"></i>
+            </button>
 
-            <div class="success-popup-content">
-                <!-- Left Side - Colorful Background -->
-                <div class="success-popup-left">
-                    <div class="success-image-wrapper">
-                        <img src="assets/images/portfolio/icons/QR copy.webp" alt="Success" class="success-image">
-                    </div>
-
-                    <h3 class="success-message">Join ACET!</h3>
-                    <p class="success-subtitle">Scan and pay the membership fee to become an ACET member.</p>
-                </div>
-
-                <!-- Right Side - Details -->
-                <div class="success-popup-right">
-                    <h2 class="popup-title">Thank You!</h2>
-                    <p class="popup-subtitle">We received your enquiry</p>
-
-                    <div class="success-details-card">
-                        <div class="detail-item">
-                            <i class="fas fa-user detail-icon"></i>
-                            <div class="detail-content">
-                                <span class="detail-label">Name</span>
-                                <span class="detail-value" id="popup-name"></span>
-                            </div>
-                        </div>
-
-                        <div class="detail-item">
-                            <i class="fas fa-envelope detail-icon"></i>
-                            <div class="detail-content">
-                                <span class="detail-label">Email</span>
-                                <span class="detail-value" id="popup-email"></span>
-                            </div>
-                        </div>
-
-                        <div class="detail-item">
-                            <i class="fas fa-phone detail-icon"></i>
-                            <div class="detail-content">
-                                <span class="detail-label">Phone</span>
-                                <span class="detail-value" id="popup-phone"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="popup-action-btn" onclick="closeSuccessPopup()">
-                        <i class="fas fa-check-circle"></i> Got it!
-                    </button>
-
-                    <p class="popup-footer-text">We'll get back to you shortly</p>
-                </div>
+            <!-- Success Icon -->
+            <div class="success-icon-circle">
+                <i class="fas fa-check"></i>
             </div>
+
+            <!-- Success Message -->
+            <h2 class="success-title">Success</h2>
+            <p class="success-message">
+                Your enquiry has been submitted successfully.<br>
+                We'll get back to you soon!
+            </p>
+
+            <!-- OK Button -->
+            <button class="success-ok-btn" onclick="closeSuccessPopup()">
+                OK
+            </button>
         </div>
     </div>
+
 
     <div class="rts-footer-area pt--100 pb--100 pt_sm--50 pb_sm--40 footer-two footer-bg-two">
         <div class="container mb-20">
@@ -1139,6 +1038,7 @@
                                 </a>
 
                             </div>
+
                         </div>
                     </div>
 
@@ -1264,13 +1164,7 @@
                             <i class="fas fa-envelope"></i>
                             <a href="#">infoacet2024@gmail.com</a>
                         </div>
-                        <!-- single ENd -->
-                        <!-- single -->
-                        <div class="single">
-                            <i class="fas fa-globe"></i>
-                            <a href="#">www.webexample.com</a>
-                        </div>
-                        <!-- single ENd -->
+
                         <!-- single -->
                         <div class="single">
                             <i class="fas fa-map-marker-alt"></i>
@@ -1306,10 +1200,15 @@
                     <li class="main-nav mega-menu">
                         <a href="team.html">Association</a>
                     </li>
-
                     <li class="main-nav project-a-after">
                         <a href="event.html">Events</a>
                     </li>
+
+                    <div class="button-area-content mt-5 ">
+                        <a href="index.html#contact"
+                            class="rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btn">Contact us
+                        </a>
+
 
                 </ul>
             </nav>
@@ -1322,10 +1221,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                    </li>
+
                     <li>
                         <a href="#">
                             <i class="fa-brands fa-youtube"></i>
@@ -1342,12 +1238,6 @@
         <!-- mobile menu area end -->
     </div>
     <!-- inner menu area desktop End -->
-
-
-    <div id="anywhere-home" class="">
-    </div>
-
-
 
     <!-- progress area start -->
     <div class="progress-wrap">
@@ -1376,7 +1266,167 @@
     <script defer src="assets/js/plugins/swiper.js"></script>
 
     <script defer src="assets/js/main.js"></script>
+
+    <!-- Social Media Links Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add click handlers to all social media icons
+            const socialLinks = document.querySelectorAll('.social-link');
+            socialLinks.forEach(function (icon) {
+                icon.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const url = this.getAttribute('data-url');
+                    if (url) {
+                        window.open(url, '_blank', 'noopener,noreferrer');
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            // Check if first time visiting
+            var isFirstVisit = !localStorage.getItem('visitedBefore');
+
+            // First visit: 5 seconds, Return visit: 2 seconds
+            var loaderTime = isFirstVisit ? 5000 : 2000;
+
+            setTimeout(function () {
+                document.body.classList.add('loader');
+                // Mark as visited
+                localStorage.setItem('visitedBefore', 'true');
+            }, loaderTime);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        /* First slider */
+        var swiper = new Swiper(".clientSwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+            speed: 4000,
+            autoplay: {
+
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                },
+                576: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                992: {
+                    slidesPerView: 5,
+                },
+            }
+        });
+
+        /* Second slider – momentum RIGHT */
+        var swiper2 = new Swiper(".client1Swiper", {
+            loop: true,
+            slidesPerView: 4,
+            spaceBetween: 30,
+            speed: 4000,   // smooth momentum
+            autoplay: {
+                disableOnInteraction: false,
+                reverseDirection: true   // moves RIGHT
+            },
+            allowTouchMove: true,
+            breakpoints: {
+                320: { slidesPerView: 2 },
+                576: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                992: { slidesPerView: 5 }
+            }
+        });
+
+        /* Team slider */
+        var teamSwiper = new Swiper(".mySwiperh1_team", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+            speed: 1000,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                575: { slidesPerView: 2 },
+                767: { slidesPerView: 3 },
+                991: { slidesPerView: 3 },
+                1300: { slidesPerView: 4 },
+                1500: { slidesPerView: 4 }
+            }
+        });
+    </script>
+      <script>
+  function openPopup() {
+    document.getElementById("joinPopup").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("joinPopup").style.display = "none";
+  }
+</script>
+
 </body>
+<div id="joinPopup" class="popup-overlay">
+  <div class="payment-popup">
+
+    <!-- LEFT : QR CODE -->
+    <div class="payment-left">
+      <img
+        src="assets/images/portfolio/icons/QR copy.webp"
+        alt="ACET Payment QR"
+        class="qr-image-left"
+      />
+      <p class="scan-text">Scan to Pay ₹349</p>
+    </div>
+
+    <!-- RIGHT : CONTENT -->
+    <div class="payment-right">
+      <span class="close-btn" onclick="closePopup()">×</span>
+
+      <h2>Join ACET Today</h2>
+
+      <p class="subtitle">
+        Become a valued member of the Association of Civil Engineers
+        Thirumangalam and be part of a professional community that
+        builds, supports, and grows together.
+      </p>
+
+      <ul class="benefits">
+        <li>✔ Connect with fellow civil engineers</li>
+        <li>✔ Access technical knowledge & workshops</li>
+        <li>✔ Participate in local development initiatives</li>
+        <li>✔ Gain recognition within the engineering community</li>
+      </ul>
+
+      <p class="price-text">
+        One-time membership fee: <strong>₹349</strong>
+      </p>
+
+      <button class="popup-btn" onclick="closePopup()">
+        I’ve Paid – Continue
+      </button>
+    </div>
+
+  </div>
+</div>
+
 
 
 </html>
